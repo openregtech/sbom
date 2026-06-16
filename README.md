@@ -47,4 +47,4 @@ Base IRI: `https://w3id.org/sbom/` (registration pending).
 
 ## License
 
-[CC-BY-4.0](LICENSE)
+[CC0 1.0 Universal](LICENSE)
