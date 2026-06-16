@@ -5,18 +5,20 @@ Software Bill of Materials (SBOM) minimum-element standards.
 
 ## What this is
 
-1) Different organisations (BSI, CISA, G7, NTIA) publish their own lists of
-   minimum elements that an SBOM shall or should contain.
-2) Different SBOM data exchange (CycloneDX, SPDX) and serialisation formats have
-   their own field names.
-3) This project provides a neutral bridge vocabulary that connects (1) and (2).
+Different organisations (BSI, CISA, G7, NTIA) publish their own lists of
+minimum elements that an SBOM shall or should contain.
+Different SBOM data exchange (CycloneDX, SPDX) and serialisation formats have
+their own field names.
+This project provides a neutral bridge vocabulary that connects the two.
 
 **`docs/sbom.ttl`** -- a small [SKOS] ontology that assigns stable,
-persistent IRIs to each minimum-element concept. It has two layers:
+persistent IRIs to each minimum-element concept.
 
-- a *bridge concept scheme* (`sbom:bridge`) that abstracts across all source standards
-- per-standard concept schemes whose concepts link to bridge concepts
-  via `skos:exactMatch` / `skos:closeMatch`
+**`docs/req/*`** -- ontologies that assign persistent IRIs
+to each minimum element in an information requirement specification.
+These IRIs are required as a source in a mapping.
+(For target, we don't need this since the SBOM data exchange formats are
+fortunately already have persistent IRIs).
 
 **`docs/mapping/*.sssom.tsv`** -- [SSSOM] mapping files that record how each
 minimum-element concept maps to a field in a target format, with the shared
@@ -25,14 +27,14 @@ bridge concept cited in the `see_also` column.
 [SKOS]: https://www.w3.org/TR/skos-reference/
 [SSSOM]: https://mapping-commons.github.io/sssom/dev/
 
-## Covered standards
+## Information requirement specifications
 
-| Prefix | Standard |
-| ------ | -------- |
-| `ntia:` | NTIA SBOM Minimum Elements (2021) |
-| `g7ai:` | G7 SBOM for AI - Minimum Elements (2026) |
+| File | Specification | Prefix |
+| ---- | ------------- | ------ |
+| `docs/req/g7ai/g7ai.ttl` | G7 SBOM for AI - Minimum Elements (2026) | `g7ai:` |
+| `docs/req/ntia/ntia/ttl` | NTIA SBOM Minimum Elements (2021) | `ntia:` |
 
-## Completed mappings
+## Mappings
 
 | File | Source | Target |
 | ---- | ------ | ------ |
@@ -41,8 +43,7 @@ bridge concept cited in the `see_also` column.
 
 ## Namespace
 
-Base IRI: `https://w3id.org/sbom/`  
-Persistent redirects via [w3id.org](https://w3id.org) (registration pending).
+Base IRI: `https://w3id.org/sbom/` (registration pending).
 
 ## License
 
