@@ -29,10 +29,10 @@ bridge concept cited in the `see_also` column.
 
 ## Information requirement specifications
 
-| File | Specification | Prefix |
-| ---- | ------------- | ------ |
-| `docs/req/g7ai/g7ai.ttl` | G7 SBOM for AI - Minimum Elements (2026) | `g7ai:` |
-| `docs/req/ntia/ntia/ttl` | NTIA SBOM Minimum Elements (2021) | `ntia:` |
+| File | Specification | Namespace |
+| ---- | ------------- | --------- |
+| `docs/req/g7ai/g7ai.ttl` | G7 SBOM for AI - Minimum Elements (2026) | `g7ai` |
+| `docs/req/ntia/ntia/ttl` | NTIA SBOM Minimum Elements (2021) | `ntia` |
 
 ## Mappings
 
