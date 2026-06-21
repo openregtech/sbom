@@ -43,8 +43,8 @@ bridge concept cited in the `see_also` column.
 
 ## Namespace
 
-Base IRI: `https://w3id.org/sbom/` (registration pending).
+Base IRI: `https://w3id.org/sbom/`.
 
 ## License
 
-[CC0 1.0 Universal](LICENSE)
+[CC0 1.0 Universal](LICENSE) (`CC0-1.0`)
